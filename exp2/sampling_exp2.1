@@ -1,0 +1,41 @@
+clc;
+clear;
+fm = input("enter input signal frequency");
+k = input("enter number of cycles");
+ti = 0:1/(fm*fm):k/fm;
+x1 = sin(2*%pi*fm*ti);
+subplot(2,2,1);
+plot(ti,x1);
+title("input signal");
+xlabel("time");
+ylabel("amplitude");
+
+fs1 = 1.5*fm;
+n1 = 0:1/(fs1):k/fm;
+x2 = sin(2*%pi*fm*n1);
+subplot(2,2,2);
+plot(n1,x2);
+plot2d3(n1,x2);
+title("under sampling");
+xlabel("time");
+ylabel("amplitude");
+
+fs2 = 3*fm;
+n2 = 0:1/(fs2):k/fm;
+x3 = sin(2*%pi*fm*n2);
+subplot(2,2,3);
+plot(n2,x3);
+plot2d3(n2,x3);
+title("Nyquist sampling");
+xlabel("time");
+ylabel("amplitude");
+
+fs3 = 20*fm;
+n3 = 0:1/(fs3):k/fm;
+x4 = sin(2*%pi*fm*n3);
+subplot(2,2,4);
+plot(n3,x4);
+plot2d3(n3,x4);
+title("Over sampling");
+xlabel("time");
+ylabel("amplitude");
