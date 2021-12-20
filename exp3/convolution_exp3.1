@@ -1,0 +1,16 @@
+clc;
+clear;
+x = [1,2,3,4];
+h = [1,2,3,4,5];
+len_x = length(x);
+len_h = length(h);
+len_y = len_x + len_h - 1;
+y = [];
+for k = 1:len_y
+    count = 0;
+    for j = max(1,k+1-len_h):min(k,len_x)
+        count = count + x(j)*h(k-j+1);
+    end
+    y(k) = count;
+end
+
