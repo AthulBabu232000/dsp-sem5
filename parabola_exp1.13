@@ -1,0 +1,10 @@
+t = 0:0.1:3;
+x = t^2;
+a = gca()
+a.x_location="origin";
+plot(t,x, color = "red");
+plot2d3(t,x);
+title("parabolic function");
+xlabel("time");
+ylabel("amplitude");
+legend("continuous", "discrete");

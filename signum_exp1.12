@@ -1,0 +1,12 @@
+t = -10:0.1:10;
+x = sign(t);
+a = gca()
+a.x_location="origin";
+plot(t,x , color = "blue");
+plot2d3(t,x);
+title("signum function");
+xlabel("time");
+ylabel("amplitude");
+legend("continuous", "discrete");
+
+

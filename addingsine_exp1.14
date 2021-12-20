@@ -1,0 +1,14 @@
+t = 0:0.01:%pi;
+y1 = sin(t);
+y2 = sin(3*t)/3;
+y3 = sin(5*t)/5;
+y4 = sin(7*t)/7;
+y5 = sin(9*t)/9;
+y = y1+y2+y3+y4+y5;
+plot(t,y,t,y1,t,y2,t,y3,t,y4,t,y5);
+legend('y', 'y1','y2','y3','y4','y5');
+title("generation of sinusoidal signals");
+xgrid(1);
+xlabel("time");
+ylabel("amplitude");
+

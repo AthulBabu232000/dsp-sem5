@@ -1,1 +1,12 @@
-
+t = linspace(0,10,1000);
+u = squarewave(t);
+v = squarewave(t,30);
+a = gca()
+a.x_location="origin";
+xgrid(4,1,7);
+plot(t,u, color = "red");
+plot(t,v, color = "blue");
+title("square wave with and without dutycycle of 0.3");
+xlabel("time");
+ylabel("amplitude");
+legend("square without dutycycle", "square with dutycycle");
