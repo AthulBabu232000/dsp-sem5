@@ -1,0 +1,11 @@
+a = 8;
+t = 0:(%pi/2):(4*%pi);
+b = gca()
+b.x_location="origin";
+y = a*sin(t);
+plot(t,y, color = "red");
+plot2d3(t,y);
+xlabel("time");
+ylabel("amplitude");
+title("triangular function");
+legend("continuous", "discrete");

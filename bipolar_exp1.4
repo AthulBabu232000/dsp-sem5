@@ -1,0 +1,11 @@
+n = linspace(0,10,50);
+bipolar = squarewave(n);
+a = gca()
+a.x_location="origin";
+plot(n, bipolar, color = "red");
+plot2d3(n, bipolar);
+xlabel('time');
+ylabel('amplitude');
+title('unit pulse function');
+legend("continuous signal", "discrete signal");
+
