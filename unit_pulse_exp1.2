@@ -1,0 +1,8 @@
+n = linspace(0,10,50);
+unit_pulse = sqrt(squarewave(n));
+plot(n, unit_pulse, color = "green");
+plot2d3(n, unit_pulse);
+xlabel('time');
+ylabel('amplitude');
+title('unit pulse function');
+legend("continuous signal", "discrete signal");
