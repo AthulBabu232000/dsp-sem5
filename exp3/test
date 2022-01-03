@@ -1,0 +1,4 @@
+clear;
+clc;
+y = x_matrix("enter a matrix",zeros(1,3));
+disp(y);

@@ -1,7 +1,10 @@
 clc;
 clear;
-x = [1,2,3,4];
-h = [1,2,3,4,5];
+//x = [1,2,3,4];
+//h = [1,2,3,4,5];
+//we can input matrix using the function x_matrix("enter a matrix", zeros(row,column));
+x = x_matrix("enter the matrix x", zeros(1,input("enter the count of x")));
+h = x_matrix("enter the matrix h", zeros(1, input("enter the count of h")));
 len_x = length(x);
 len_h = length(h);
 len_y = len_x + len_h - 1;
@@ -13,5 +16,26 @@ for k = 1:len_y
     end
     y(k) = count;
 end
-disp(y);
+//disp(y);
+//disp(conv(x,h));
+subplot(2,2,1)
+title("input signal");
+xlabel("discrete n");
+ylabel("amplitude");
+plot2d3(x);
+subplot(2,2,2);
+title("impulse signal");
+xlabel("discrete n");
+ylabel("amplitude");
+plot2d3(h);
+title("convoluted signal without inbuilt function");
+xlabel("discrete n");
+ylabel("amplitude");
+subplot(2,2,3);
+plot2d3(y);
+subplot(2,2,4);
+title("convoluted signal with inbuilt function");
+xlabel("discrete n");
+ylabel("amplitude");
+plot2d3(conv(x,h));
 
